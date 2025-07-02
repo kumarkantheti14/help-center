@@ -25,10 +25,7 @@ reviews:
     enabled: true
     auto_incremental_review: true
     drafts: false
-    base_branches:
-     - help-center-task-2
-     - help-center-base
-
+   
   # Tool integrations
   tools:
     # Common tools (all enabled by default)

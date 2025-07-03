@@ -186,10 +186,17 @@
   color: white;
   cursor: pointer;
   font-size: 1.25rem; /* Adjust icon size as needed */
+  /* Preserve keyboard accessibility */
+  outline-offset: 2px;
 }
 
 .themeToggle:hover {
   color: #cbd5e0; /* Lighter color on hover */
+}
+
+.themeToggle:focus-visible {
+  outline: 2px solid #cbd5e0;
+  outline-offset: 2px;
 }
 
 /* Dark Mode adjustments for Home.module.css */

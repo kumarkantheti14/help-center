@@ -4,7 +4,15 @@
 // Issue: Unused function parameter 'unusedParam'
 void calculateSomething(int value, int unusedParam) {
     // Issue: Magic number '10' without a named constant
-    if (value > 10) {
+// Define a named constant instead of using the magic number 10
+const int THRESHOLD_VALUE = 10;
+
+void calculateSomething(int value, int unusedParam) {
+    if (value > THRESHOLD_VALUE) {
+        // existing implementation
+    }
+    // rest of function...
+}
         std::cout << "Value is greater than 10" << std::endl;
     }
     // Issue: Missing brace for single-statement if (maintainability/readability)

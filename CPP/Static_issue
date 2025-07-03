@@ -37,7 +37,6 @@ void calculateSomething(int value, int unusedParam) {
 int main() {
     int x = 5;
     // Issue: Unused variable 'y'
-    int y = 10; 
 
     // Issue: Hardcoded literal '7' in function call
     calculateSomething(x, 7); 

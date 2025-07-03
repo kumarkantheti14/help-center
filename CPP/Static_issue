@@ -39,7 +39,8 @@ int main() {
     // Issue: Unused variable 'y'
 
     // Issue: Hardcoded literal '7' in function call
-    calculateSomething(x, 7); 
+    const int SECOND_PARAM = 7;
+    calculateSomething(x, SECOND_PARAM);
 
     // Issue: Unhandled exception possibility (e.g., from new int) - though modern C++ favors smart pointers
     try {

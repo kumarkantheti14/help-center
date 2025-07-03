@@ -1,0 +1,63 @@
+#include <iostream>
+#include <vector>
+
+// Issue: Unused function parameter 'unusedParam'
+void calculateSomething(int value, int unusedParam) {
+    // Issue: Magic number '10' without a named constant
+// Define a named constant instead of using the magic number 10
+const int THRESHOLD_VALUE = 10;
+
+void calculateSomething(int value, int unusedParam) {
+    if (value > THRESHOLD_VALUE) {
+        // existing implementation
+    }
+    // rest of function...
+}
+        std::cout << "Value is greater than 10" << std::endl;
+    }
+    // Issue: Missing brace for single-statement if (maintainability/readability)
+    if (value < 0)
+        std::cout << "Value is negative" << std::endl;
+
+    // Issue: Potential memory leak - 'rawPointer' is allocated but not freed
+    int* rawPointer = new int(5); 
+
+    // Issue: Unused variable 'localUnusedVariable'
+
+    // Issue: Variable 'i' declared inside loop, but could be declared outside for efficiency in older C++ standards
+    for (int i = 0; i < 5; ++i) {
+        // Issue: Empty loop body (potential bug or bad practice)
+    }
+
+    // Issue: Using raw pointer for dynamic array without proper management (e.g., std::vector)
+    int* dynamicArray = new int[5];
+    // Issue: Potential memory leak if 'dynamicArray' is not deleted
+    // delete[] dynamicArray; // Missing or conditional deletion
+
+    // Issue: Redundant check 'i < 10' as loop already ensures 'i < 5'
+    for (int i = 0; i < 5; ++i) {
+        if (i < 10) {
+            std::cout << "Processing item " << i << std::endl;
+        }
+    }
+}
+
+int main() {
+    int x = 5;
+    // Issue: Unused variable 'y'
+
+    // Issue: Hardcoded literal '7' in function call
+    const int SECOND_PARAM = 7;
+    calculateSomething(x, SECOND_PARAM);
+
+    // Issue: Unhandled exception possibility (e.g., from new int) - though modern C++ favors smart pointers
+    try {
+        int* anotherRawPointer = new int(100);
+        // ... use anotherRawPointer ...
+        delete anotherRawPointer; // Proper deletion
+    } catch (const std::bad_alloc& e) {
+        std::cerr << "Memory allocation failed: " << e.what() << std::endl;
+    }
+
+    return 0;
+}

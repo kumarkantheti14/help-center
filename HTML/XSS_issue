@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>XSS Example</title>
+</head>
+<body>
+  <form>
+    <label for="userInput">Enter some text:</label>
+    <input type="text" id="userInput" name="userInput">
+    <button type="button" onclick="displayInput()">Display</button>
+  </form>
+  <div id="output"></div>
+
+  <script>
+    function displayInput() {
+      const userInput = document.getElementById("userInput").value;
+      const outputDiv = document.getElementById("output");
+      outputDiv.innerHTML = "You entered: " + userInput;
+    }
+  </script>
+</body>
+</html>

@@ -15,7 +15,6 @@ void calculateSomething(int value, int unusedParam) {
     int* rawPointer = new int(5); 
 
     // Issue: Unused variable 'localUnusedVariable'
-    int localUnusedVariable = 20;
 
     // Issue: Variable 'i' declared inside loop, but could be declared outside for efficiency in older C++ standards
     for (int i = 0; i < 5; ++i) {
